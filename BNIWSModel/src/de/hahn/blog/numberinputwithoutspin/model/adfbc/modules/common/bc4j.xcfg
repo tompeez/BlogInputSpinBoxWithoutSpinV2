@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="de.hahn.blog.numberinputwithoutspin.model.adfbc.modules.BNIWSAppModuleModule">
+    <AppModuleConfig name="BNIWSAppModuleModuleLocal" jbo.project="de.hahn.blog.numberinputwithoutspin.model.BNIWSModel"
+                     ApplicationName="de.hahn.blog.numberinputwithoutspin.model.adfbc.modules.BNIWSAppModuleModule"
+                     DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      <Security AppModuleJndiName="de.hahn.blog.numberinputwithoutspin.model.adfbc.modules.BNIWSAppModuleModule"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="BNIWSAppModuleModuleShared"
+                     jbo.project="de.hahn.blog.numberinputwithoutspin.model.BNIWSModel"
+                     ApplicationName="de.hahn.blog.numberinputwithoutspin.model.adfbc.modules.BNIWSAppModuleModule"
+                     DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      <Security AppModuleJndiName="de.hahn.blog.numberinputwithoutspin.model.adfbc.modules.BNIWSAppModuleModule"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>

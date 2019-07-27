@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="BNIWSAppModuleModule"
+  Version="12.2.1.12.2"
+  InheritPersonalization="merge"
+  ComponentClass="oracle.jbo.server.ApplicationModuleImpl"
+  ClearCacheOnRollback="true"
+  LoadComponentsLazily="true">
+    <ViewUsage
+      Name="Employees1"
+      ViewObjectName="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.EmployeesView"/>
+    <ViewUsage
+      Name="Employees2"
+      ViewObjectName="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.EmployeesView"/>
+    <ViewLinkUsage
+      Name="EmpManagerFkLink1"
+      ViewLinkObjectName="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.links.EmpManagerFkLink"
+      SrcViewUsageName="de.hahn.blog.numberinputwithoutspin.model.adfbc.modules.BNIWSAppModuleModule.Employees1"
+      DstViewUsageName="de.hahn.blog.numberinputwithoutspin.model.adfbc.modules.BNIWSAppModuleModule.Employees2"
+      Reversed="false"/>
+</AppModule>

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+.nospin af|inputNumberSpinbox::incrementor-icon-style {
+    display: none;
+}
+
+.nospin af|inputNumberSpinbox::decrementor-icon-style {
+    display: none;
+}
+/*
+.nospinquery af|query::criterion af|inputNumberSpinbox::decrement-cell {
+   display: none;
+}
+
+.nospinquery af|query::criterion af|inputNumberSpinbox::increment-cell {
+   display: none;
+}
+*/

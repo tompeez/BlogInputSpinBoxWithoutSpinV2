@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.12.2" id="DataBindings"
+             SeparateXMLFiles="false" Package="de.hahn.blog.numberinputwithoutspin.view" ClientType="Generic">
+  <pageMap>
+    <page path="/index.jsf" usageId="de_hahn_blog_numberinputwithoutspin_view_indexPageDef"/>
+    <page path="/query.jsf" usageId="de_hahn_blog_numberinputwithoutspin_view_queryPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="de_hahn_blog_numberinputwithoutspin_view_indexPageDef"
+          path="de.hahn.blog.numberinputwithoutspin.view.pageDefs.indexPageDef"/>
+    <page id="de_hahn_blog_numberinputwithoutspin_view_queryPageDef"
+          path="de.hahn.blog.numberinputwithoutspin.view.pageDefs.queryPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="BNIWSAppModuleModuleDataControl"
+                     Package="de.hahn.blog.numberinputwithoutspin.model.adfbc.modules"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="BNIWSAppModuleModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

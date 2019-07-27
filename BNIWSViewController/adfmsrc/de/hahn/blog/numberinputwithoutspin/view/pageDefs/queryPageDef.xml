@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.2" id="queryPageDef"
+                Package="de.hahn.blog.numberinputwithoutspin.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Employees1" RangeSize="25" DataControl="BNIWSAppModuleModuleDataControl" id="Employees1Iterator"/>
+    <searchRegion Criteria="EmployeesViewCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="Employees1Iterator" id="EmployeesViewCriteriaQuery"/>
+    <searchRegion Criteria="EmployeesViewCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="Employees1Iterator" id="EmployeesViewCriteriaQuery1"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="Employees1Iterator" id="Employees1">
+      <nodeDefinition DefName="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.EmployeesView" Name="Employees10">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="Salary"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="Employees1Iterator" id="Employees11">
+      <nodeDefinition DefName="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.EmployeesView" Name="Employees110">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="Salary"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

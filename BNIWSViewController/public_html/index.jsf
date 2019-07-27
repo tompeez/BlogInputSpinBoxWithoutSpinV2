@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="index.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelGridLayout id="pgl1">
+                <af:gridRow height="50px" id="gr2">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2">
+                        <!-- Header -->
+                        <af:outputText value="InputNumber Without SpinBox" id="ot1" inlineStyle="font-size:x-large;"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow height="100%" id="gr1">
+                    <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1">
+                        <!-- Content -->
+                        <af:panelGroupLayout id="pgl2" layout="vertical" inlineStyle="padding-left:20px;">
+                            <af:inputNumberSpinbox label="Number" id="ins1" value="#{bindings.myNumber1.inputValue}"
+                                                   styleClass="nospin"/>
+                            <af:spacer width="10" height="30" id="s1"/>
+                            <af:inputNumberSpinbox label="Spinnumber" id="ins2"
+                                                   value="#{bindings.myNumber21.inputValue}"/>
+                            <af:spacer width="10" height="30" id="s2"/>
+                            <af:inputText label="Number in af:inputText" id="it1">
+                                <af:convertNumber type="number" id="nc1" pattern="0"/>
+                            </af:inputText>
+                            <af:spacer width="10" height="30" id="s3"/>
+                            <af:button text="Submit" id="b1"/>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:form>
+    </af:document>
+</f:view>

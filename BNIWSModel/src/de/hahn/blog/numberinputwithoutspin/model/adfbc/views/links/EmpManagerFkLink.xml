@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmpManagerFkLink"
+  Version="12.2.1.12.2"
+  InheritPersonalization="merge"
+  EntityAssociation="de.hahn.blog.numberinputwithoutspin.model.adfbc.entities.associations.EmpManagerFkAssoc">
+  <ViewLinkDefEnd
+    Name="ManagerIdEmployees"
+    Cardinality="1"
+    Source="true"
+    Owner="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.EmployeesView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="ManagerIdEmployees"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.EmployeesView.EmployeeId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="Employees"
+    Cardinality="-1"
+    Owner="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.EmployeesView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="Employees"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="de.hahn.blog.numberinputwithoutspin.model.adfbc.views.EmployeesView.ManagerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

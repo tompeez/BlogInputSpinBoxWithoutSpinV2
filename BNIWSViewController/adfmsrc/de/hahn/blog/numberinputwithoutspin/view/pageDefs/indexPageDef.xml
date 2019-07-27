@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.12.2" id="indexPageDef"
+                Package="de.hahn.blog.numberinputwithoutspin.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables">
+      <variable Name="myNumber" Type="java.math.BigInteger"/>
+      <variable Name="myNumber2" Type="java.math.BigInteger"/>
+    </variableIterator>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="variables" id="myNumber1">
+      <AttrNames>
+        <Item Value="myNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="variables" id="myNumber21">
+      <AttrNames>
+        <Item Value="myNumber2"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>
